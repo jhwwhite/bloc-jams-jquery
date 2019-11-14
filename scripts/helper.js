@@ -5,7 +5,7 @@
       $('#time-control.totalTime').text(totalTime);
       player.playPause(song);
     }
-  }
+}
 
-  const Helper = newHelper();
+  const helper = new Helper();
 }
