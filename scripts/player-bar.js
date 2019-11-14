@@ -33,7 +33,7 @@
   $('#volume-control input').on('input' ,function (event) {
     player.setVolume(event.target.value)
   })
-
+//git change
   setInterval( () => {
     if (player.playState !== 'playing') { return; }
     const currentTime = player.getTime();
