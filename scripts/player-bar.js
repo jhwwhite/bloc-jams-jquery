@@ -10,7 +10,6 @@
     const currentSongIndex = album.songs.indexOf(player.currentlyPlaying);
     const nextSongIndex = currentSongIndex + 1;
     if (nextSongIndex >= album.songs.length) { return; }
-
     const nextSong = album.songs[nextSongIndex];
     helper.playPauseAndUpdate  (nextSong);
   });
@@ -32,9 +31,9 @@
 
   $('#volume-control input').on('input' ,function (event) {
     player.setVolume(event.target.value)
-  })
-//git change
-  setInterval( () => {
+  });
+
+setInterval( () => {
     if (player.playState !== 'playing') { return; }
     const currentTime = player.getTime();
     const duration = player.getDuration();
@@ -42,6 +41,6 @@
     const percent = (currentTime / duration) * 100;
     $('#time-control .current-time').text( currentTime );
     $('#time-control input').val(percent);
-    $('#time-control input .total-time').text(totalTime);
-  }, 1000);
+  $('#time-control .total-time').
+},   1000);
 }
